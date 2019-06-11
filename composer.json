@@ -1,0 +1,40 @@
+{
+  "name": "idiosyncratic/project",
+  "type": "library",
+  "license": "ISC",
+  "authors": [
+    {
+      "name": "Jason Silkey",
+      "email": "jason@jasonsilkey.com"
+    }
+  ],
+  "keywords": [
+  ],
+  "require": {
+    "php": ">=7.3"
+  },
+  "require-dev": {
+    "doctrine/coding-standard": "^6.0",
+    "phpstan/phpstan": "^0.11",
+    "phpunit/phpunit": "^8.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "discard-changes": true,
+    "bin-dir" : "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "Idiosyncratic\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Idiosyncratic\\": "tests"
+    }
+  }
+}
