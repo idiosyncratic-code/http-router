@@ -9,9 +9,14 @@
     }
   ],
   "keywords": [
+    "psr-7",
+    "psr-15"
   ],
   "require": {
-    "php": ">=7.3"
+    "php": ">=7.3",
+    "psr/http-message": "^1.0",
+    "psr/http-server-handler": "^1.0",
+    "psr/http-server-middleware": "^1.0"
   },
   "require-dev": {
     "doctrine/coding-standard": "^6.0",
@@ -29,12 +34,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Idiosyncratic\\": "src"
+      "Idiosyncratic\\Http\\Router\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Idiosyncratic\\": "tests"
+      "Idiosyncratic\\Http\\Router\\": "tests"
     }
   }
 }
