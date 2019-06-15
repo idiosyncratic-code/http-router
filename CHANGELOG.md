@@ -7,4 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - Router Interface
-- Router Middleware
+- Routing Middleware
+- Routing Request Handler
+- Error Response Factory
