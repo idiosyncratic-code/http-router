@@ -31,6 +31,10 @@ final class RouterRequestHandler implements RequestHandlerInterface
     {
         $info = $this->routes->matchRoute($request);
 
+        foreach ($info->getVars() as $key => $value) {
+            $request = $request->withAttribute($key, $value);
+        }
+
         $handler = $this->container->get($info->getHandler());
 
         return $handler->handle($request);

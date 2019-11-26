@@ -48,7 +48,7 @@ class FastRouteCollection implements RouteCollection
                 );
                 break;
             case FastRouteDispatcher::FOUND:
-                return new RouteInfo($routeInfo[1]);
+                return new RouteInfo($routeInfo[1], $routeInfo[2]);
             default:
                 throw new RuntimeException('Handler Not Found');
         }
