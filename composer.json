@@ -1,5 +1,5 @@
 {
-  "name": "idiosyncratic/project",
+  "name": "idiosyncratic/http-router",
   "type": "library",
   "license": "ISC",
   "authors": [
@@ -14,6 +14,8 @@
   ],
   "require": {
     "php": ">=7.3",
+    "nikic/fast-route": "^1.3",
+    "psr/container": "^1.0",
     "psr/http-message": "^1.0",
     "psr/http-server-handler": "^1.0",
     "psr/http-server-middleware": "^1.0"
