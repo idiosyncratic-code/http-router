@@ -56,8 +56,6 @@ class FastRouteCollection implements RouteCollection
 
     /**
      * Adds a route to the collection.
-     *
-     * The syntax used in the $route string depends on the used route parser.
      */
     public function addRoute(string $route, string $handler, string ...$method) : void
     {
@@ -86,8 +84,6 @@ class FastRouteCollection implements RouteCollection
 
     /**
      * Adds a GET route to the collection
-     *
-     * This is simply an alias of $this->addRoute('GET', $route, $handler)
      */
     public function get(string $route, string $handler) : void
     {
@@ -96,8 +92,6 @@ class FastRouteCollection implements RouteCollection
 
     /**
      * Adds a POST route to the collection
-     *
-     * This is simply an alias of $this->addRoute('POST', $route, $handler)
      */
     public function post(string $route, string $handler) : void
     {
@@ -106,8 +100,6 @@ class FastRouteCollection implements RouteCollection
 
     /**
      * Adds a PUT route to the collection
-     *
-     * This is simply an alias of $this->addRoute('PUT', $route, $handler)
      */
     public function put(string $route, string $handler) : void
     {
@@ -116,8 +108,6 @@ class FastRouteCollection implements RouteCollection
 
     /**
      * Adds a DELETE route to the collection
-     *
-     * This is simply an alias of $this->addRoute('DELETE', $route, $handler)
      */
     public function delete(string $route, string $handler) : void
     {
@@ -126,8 +116,6 @@ class FastRouteCollection implements RouteCollection
 
     /**
      * Adds a PATCH route to the collection
-     *
-     * This is simply an alias of $this->addRoute('PATCH', $route, $handler)
      */
     public function patch(string $route, string $handler) : void
     {
@@ -136,8 +124,6 @@ class FastRouteCollection implements RouteCollection
 
     /**
      * Adds a HEAD route to the collection
-     *
-     * This is simply an alias of $this->addRoute('HEAD', $route, $handler)
      */
     public function head(string $route, string $handler) : void
     {
@@ -146,8 +132,6 @@ class FastRouteCollection implements RouteCollection
 
     /**
      * Adds an OPTIONS route to the collection
-     *
-     * This is simply an alias of $this->addRoute('OPTIONS', $route, $handler)
      */
     public function options(string $route, string $handler) : void
     {
