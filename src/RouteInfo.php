@@ -4,25 +4,17 @@ declare(strict_types=1);
 
 namespace Idiosyncratic\Http\Router;
 
-use Psr\Http\Server\RequestHandlerInterface;
-
 class RouteInfo
 {
-    /** @var string|RequestHandlerInterface */
+    /** @var string */
     private $handler;
 
-    /**
-     * @param string|RequestHandlerInterface $handler
-     */
-    public function __construct($handler)
+    public function __construct(string $handler)
     {
         $this->handler = $handler;
     }
 
-    /**
-     * @return string|RequestHandlerInterface
-     */
-    public function getHandler()
+    public function getHandler() : string
     {
         return $this->handler;
     }

@@ -17,6 +17,7 @@ use RuntimeException;
 use function array_map;
 use function class_implements;
 use function in_array;
+use function is_array;
 use function sprintf;
 use function strtoupper;
 
@@ -24,6 +25,9 @@ class FastRouteCollection implements RouteCollection
 {
     /** @var RouteCollector */
     private $collector;
+
+    /** @var FastRouteDispatcher */
+    private $dispatcher;
 
     public function __construct()
     {
@@ -54,15 +58,12 @@ class FastRouteCollection implements RouteCollection
      * Adds a route to the collection.
      *
      * The syntax used in the $route string depends on the used route parser.
-     *
-     * @param string $handler Handler class name. Must implement Psr\Http\Server\RequestHandlerInterface
-     * @param string $method  HTTP methods supported by handler
      */
     public function addRoute(string $route, string $handler, string ...$method) : void
     {
         $interfaces = class_implements($handler);
 
-        if ($interfaces === false) {
+        if (! is_array($interfaces)) {
             throw new RuntimeException(sprintf('Handler %s is not a valid class name', $handler));
         }
 
