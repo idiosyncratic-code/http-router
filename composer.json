@@ -24,7 +24,7 @@
     "idiosyncratic/devtools": "^0.2"
   },
   "suggest": {
-    "nikic/fast-route": "Required for use of Idiosyncratic\\Http\\Router\\RouteGroup"
+    "nikic/fast-route": "For using the included RouteCollection implementation"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
