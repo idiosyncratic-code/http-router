@@ -21,10 +21,11 @@
     "psr/http-server-handler": "^1.0"
   },
   "require-dev": {
-    "idiosyncratic/devtools": "^0.2"
+    "idiosyncratic/devtools": "^0.2",
+    "nikic/fast-route": "^1.3"
   },
   "suggest": {
-    "nikic/fast-route": "For using the included RouteCollection implementation"
+    "nikic/fast-route": "For using the bundled RouteCollection implementation"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
