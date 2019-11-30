@@ -1,5 +1,6 @@
 {
   "name": "idiosyncratic/http-router",
+  "description": "A lightweight PSR-15 based HTTP router implementation",
   "type": "library",
   "license": "ISC",
   "authors": [
