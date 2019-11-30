@@ -14,6 +14,7 @@
   ],
   "require": {
     "php": ">=7.3",
+    "idiosyncratic/http-exceptions": "^0.9",
     "nikic/fast-route": "^1.3",
     "psr/container": "^1.0",
     "psr/http-message": "^1.0",

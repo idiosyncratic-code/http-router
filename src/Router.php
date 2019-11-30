@@ -9,7 +9,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 
-final class RouterRequestHandler implements RequestHandlerInterface
+final class Router implements RequestHandlerInterface
 {
     /** @var ContainerInterface */
     private $container;
@@ -29,13 +29,13 @@ final class RouterRequestHandler implements RequestHandlerInterface
      */
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
-        $info = $this->routes->matchRoute($request);
+        $info = $this->routes->findRoute($request);
 
-        foreach ($info->getVars() as $key => $value) {
+        foreach ($info->vars as $key => $value) {
             $request = $request->withAttribute($key, $value);
         }
 
-        $handler = $this->container->get($info->getHandler());
+        $handler = $this->container->get($info->handler);
 
         return $handler->handle($request);
     }
