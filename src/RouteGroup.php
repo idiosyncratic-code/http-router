@@ -64,13 +64,11 @@ final class RouteGroup implements RouteCollection
      */
     public function addRoute(string $route, string $handler, string ...$method) : void
     {
-        $interfaces = class_implements($handler);
-
-        if (! is_array($interfaces)) {
+        if (class_exists($handler) === false) {
             throw new RuntimeException(sprintf('Handler %s is not a valid class name', $handler));
         }
 
-        if (in_array(RequestHandlerInterface::class, $interfaces) === false) {
+        if (in_array(RequestHandlerInterface::class, class_implements($handler)) === false) {
             throw new RuntimeException(sprintf(
                 'Handler %s must implement %s',
                 $handler,
